@@ -4,8 +4,10 @@ const secret = 'abcdefg';
 
 export const createHash = (value = 'I love cupcakes') => {
     const hash = createHmac('sha256', secret)
-    .update(value)
-    .digest('hex');
+        .update(value)
+        .digest('hex')
+
+    return hash
 }
 
 export const dependancyCheck = async () => {
